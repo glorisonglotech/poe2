@@ -1,0 +1,726 @@
+/* Root Variables */
+:root {
+    --text: white;
+    --background: black;
+    --link: blue;
+}
+
+/* Global Reset */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 255, 255, 0.459)), url("images/black-metal-texture_662214-230502.avif");
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+/* Logo */
+.logo {
+    width: 150px;
+    cursor: pointer;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+nav a {
+    color: var(--text);
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+nav a span {
+    margin-left: 8px;
+}
+
+nav a:last-child {
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    margin: 5%;
+    color: var(--text);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-left {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-left h1 {
+    font-style: italic;
+    font-size: 2.5rem;
+}
+
+.hero-left p {
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.hero-right {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image {
+    width: 100%; 
+    max-width: 250px;
+    height: auto; 
+    border-radius: 50%;
+}
+
+/* Links Section */
+.links {
+    margin-top: -5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center links on smaller screens */
+    margin-left: 0;
+}
+
+.links a {
+    color: var(--text);
+    padding: 10px 15px;
+    border: 2px solid cyan;
+    border-radius: 10px;
+    margin: 10px;
+    position: relative;
+    z-index: 1;
+    transition: 0.5s ease-in-out;
+}
+
+.links a:hover {
+    background-color: black;
+    color: cyan;
+}
+
+.links span {
+    margin-left: 5px;
+}
+
+/* Main Section */
+main {
+    background-color: var(--text);
+    color: black;
+    position: relative;
+    width: 100%;
+}
+
+/* About Section */
+#about {
+    padding: 50px 10%;
+    background-color: #1a1a1a;
+    color: var(--text);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.about-left {
+    flex: 1;
+    min-width: 300px;
+    text-align: justify;
+}
+
+.about-left h1 {
+    font-size: 2rem;
+    color: cyan;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-left p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.about-right {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-right h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    color: cyan;
+    margin-bottom: 20px;
+}
+
+.about-right div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.about-right label {
+    font-size: 1rem;
+    flex: 1;
+    color: cyan;
+}
+
+.about-right progress {
+    flex: 2;
+    height: 20px;
+    border-radius: 10px;
+    appearance: none;
+}
+
+.about-right progress::-webkit-progress-bar {
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.about-right progress::-webkit-progress-value {
+    background-color: cyan;
+    border-radius: 10px;
+}
+
+.about-right span {
+    flex: 0.5;
+    font-size: 0.9rem;
+    color: white;
+    text-align: right;
+}
+
+/* Education Section */
+#education {
+    padding: 50px 10%;
+    background-color: #1a1a1a;
+    color: var(--text);
+    text-align: center;
+}
+
+#education h2 {
+    font-size: 2rem;
+    color: cyan;
+    margin-bottom: 30px;
+}
+
+.education-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.education-item {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    text-align: left;
+}
+
+.education-item h3 {
+    font-size: 1.5rem;
+    color: cyan;
+    margin-bottom: 10px;
+}
+
+.education-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+.cv-download {
+    margin-top: 30px;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #1a1a1a;
+    background-color: cyan;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #00bcd4;
+}
+
+/* Projects Section */
+#projects {
+    padding: 50px 10%;
+    background-color: #1a1a1a;
+    color: var(--text);
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2rem;
+    color: cyan;
+    margin-bottom: 20px;
+}
+
+#projects p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.project-item {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    text-align: left;
+}
+
+.project-item h3 {
+    font-size: 1.5rem;
+    color: cyan;
+    margin-bottom: 10px;
+}
+
+.project-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #1a1a1a;
+    background-color: cyan;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #00bcd4;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 10%;
+    background-color: #1a1a1a;
+    color: var(--text);
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    color: cyan;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: cyan;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #222;
+    color: var(--text);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #888;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #1a1a1a;
+    background-color: cyan;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #00bcd4;
+}
+
+/* Footer Section */
+footer {
+    background-color: #1a1a1a;
+    color: var(--text);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: var(--text);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: cyan;
+}
+
+/* Responsive Design */
+@media (max-width: 810px) {
+    nav a span {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    #about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-left,
+    .about-right {
+        width: 100%;
+    }
+
+    .about-right div {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .about-right progress {
+        width: 100%;
+    }
+
+    #contact {
+        padding: 30px 5%;
+    }
+
+    #contact h2 {
+        font-size: 1.8rem;
+    }
+
+    #contact p {
+        font-size: 0.9rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.9rem;
+    }
+
+    button[type="submit"] {
+        font-size: 0.9rem;
+    }
+
+    .education-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .education-item {
+        max-width: 100%;
+    }
+
+    .download-btn {
+        font-size: 0.9rem;
+    }
+
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-item {
+        max-width: 100%;
+    }
+
+    .project-link {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        margin: auto;
+        padding: 20px;
+    }
+
+    .hero-left h1 {
+        font-size: 2rem;
+    }
+
+    .hero-left p {
+        font-size: 0.9rem;
+    }
+
+    .links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #about {
+        padding: 20px;
+    }
+
+    .about-left h1 {
+        font-size: 1.5rem;
+    }
+
+    .about-left p {
+        font-size: 0.9rem;
+    }
+
+    .about-right h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-right label {
+        font-size: 0.9rem;
+    }
+
+    .about-right span {
+        font-size: 0.8rem;
+    }
+
+    #contact h2 {
+        font-size: 1.5rem;
+    }
+
+    #contact p {
+        font-size: 0.8rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.8rem;
+    }
+
+    button[type="submit"] {
+        font-size: 0.8rem;
+    }
+
+    #education h2 {
+        font-size: 1.5rem;
+    }
+
+    .education-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .education-item p {
+        font-size: 0.9rem;
+    }
+
+    .download-btn {
+        font-size: 0.8rem;
+        padding: 8px 15px;
+    }
+
+    #projects h2 {
+        font-size: 1.5rem;
+    }
+
+    .project-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .project-item p {
+        font-size: 0.9rem;
+    }
+
+    .project-link {
+        font-size: 0.8rem;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-left h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-left p {
+        font-size: 0.8rem;
+    }
+
+    .about-left h1 {
+        font-size: 1.2rem;
+    }
+
+    .about-left p {
+        font-size: 0.8rem;
+    }
+
+    .about-right h2 {
+        font-size: 1.2rem;
+    }
+
+    .about-right label {
+        font-size: 0.8rem;
+    }
+
+    .about-right span {
+        font-size: 0.7rem;
+    }
+
+    #contact h2 {
+        font-size: 1.5rem;
+    }
+
+    #contact p {
+        font-size: 0.8rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.8rem;
+    }
+
+    button[type="submit"] {
+        font-size: 0.8rem;
+    }
+
+    #education h2 {
+        font-size: 1.5rem;
+    }
+
+    .education-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .education-item p {
+        font-size: 0.9rem;
+    }
+
+    .download-btn {
+        font-size: 0.8rem;
+        padding: 8px 15px;
+    }
+
+    #projects h2 {
+        font-size: 1.5rem;
+    }
+
+    .project-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .project-item p {
+        font-size: 0.9rem;
+    }
+
+    .project-link {
+        font-size: 0.8rem;
+        padding: 8px 15px;
+    }
+}
+@media (max-width: 400px) {
+    .links a {
+        padding: 8px 10px; 
+        font-size: 0.8rem;
+    }
+
+    .hero-left h1 {
+        font-size: 1.8rem; 
+    }
+
+    .hero-left p {
+        font-size: 0.8rem; 
+    }
+}
