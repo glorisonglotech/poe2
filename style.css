@@ -80,12 +80,29 @@ nav a:last-child {
 .hero-left h1 {
     font-style: italic;
     font-size: 2.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.5s ease-in-out forwards;
 }
 
 .hero-left p {
     font-family: 'Courier New', Courier, monospace;
     margin-top: 10px;
     font-size: 1.2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero-right {
@@ -105,8 +122,9 @@ nav a:last-child {
     margin-top: -5%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Center links on smaller screens */
+    justify-content: center;
     margin-left: 0;
+    animation: dancebtn infinite ease;
 }
 
 .links a {
@@ -131,11 +149,59 @@ nav a:last-child {
 
 /* Main Section */
 main {
-    background-color: var(--text);
+    background-color: #1a1a1a;
     color: black;
     position: relative;
     width: 100%;
 }
+
+main h3 {
+    text-align: center;
+    color: cyan;
+    margin-top: 5%;
+    font-style: italic;
+    text-decoration: dotted;
+}
+
+/* Tech Stack Section */
+.tech-stack {
+    position: relative;
+    margin: 2%;
+}
+.tech-images{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tech-stack .marq {
+    display: flex;
+    gap: 50px;
+    animation: righttoleft 10s linear infinite;
+}
+
+@keyframes righttoleft {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+.tech-stack img {
+    width: 30px;
+    height: auto;
+    animation: bounce 2s infinite ease-in-out;
+    margin: 2% 0;
+}
+
+ @keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+} 
 
 /* About Section */
 #about {
@@ -279,6 +345,52 @@ main {
 }
 
 /* Projects Section */
+/* .project-item {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    text-align: left;
+}
+
+.project-item h3 {
+    font-size: 1.5rem;
+    color: cyan;
+    margin-bottom: 10px;
+}
+
+.project-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+} */
+
+.project-link,
+.live-demo-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #1a1a1a;
+    background-color: cyan;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-right: 10px;
+}
+
+.project-link:hover,
+.live-demo-btn:hover {
+    background-color: #00bcd4;
+    transform: scale(1.05);
+}
+
+.project-item p strong {
+    color: cyan;
+    font-weight: bold;
+}
 #projects {
     padding: 50px 10%;
     background-color: #1a1a1a;
@@ -328,7 +440,7 @@ main {
 
 .project-link {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 10px 4px;
     font-size: 1rem;
     color: #1a1a1a;
     background-color: cyan;
@@ -342,6 +454,7 @@ main {
 .project-link:hover {
     background-color: #00bcd4;
 }
+
 
 /* Contact Section */
 #contact {
@@ -420,6 +533,17 @@ footer {
     text-align: center;
     padding: 20px 0;
     font-size: 14px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .footer-container {
@@ -437,10 +561,11 @@ footer {
 .social-links a {
     color: var(--text);
     font-size: 1.5rem;
-    transition: color 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-links a:hover {
+    transform: rotate(360deg);
     color: cyan;
 }
 
@@ -527,6 +652,10 @@ footer {
     }
 
     .project-item {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
         max-width: 100%;
     }
 
@@ -710,6 +839,7 @@ footer {
         padding: 8px 15px;
     }
 }
+
 @media (max-width: 400px) {
     .links a {
         padding: 8px 10px; 
